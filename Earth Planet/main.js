@@ -19,7 +19,7 @@ scene.add(earthGroup);
 
 earthGroup.rotation.z = -23.4 * Math.PI / 100;
 
-const geometry = new THREE.SphereGeometry(1, 32, 32);
+const geometry = new THREE.IcosahedronGeometry(1, 12);
 
 const loader = new THREE.TextureLoader();
 const earthTexture = loader.load('textures/earthmap1k.jpg');
@@ -56,14 +56,8 @@ earthGroup.add(cloudsMesh);
 
 const directionalLight = new THREE.DirectionalLight(0xffffff);
 // directionalLight.intensity = 1; // Adjust intensity as needed
-directionalLight.position.set(-2, 0.5, 1.5);
+directionalLight.position.set(-2, -0.5, 1.5);
 scene.add(directionalLight);
-
-directionalLight.shadow.mapSize.width = 1024;
-directionalLight.shadow.mapSize.height = 1024;
-directionalLight.shadow.camera.near = 0.5;
-directionalLight.shadow.camera.far = 50;
-
 
 function createStars() {
     const starGeometry = new THREE.BufferGeometry();
