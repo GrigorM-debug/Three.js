@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explotion Effect</title>
+    <style>
+        body {
+          margin: 0;
+          background: #101010;
+          font-family: "Lato";
+        }
+        .rendered {
+          background-image: url('./assets/circuit-board.webp');
+        }
+        .rendered h1 {
+          color:#f0f0f0;
+        }
+        #container {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          
+          background-size: cover;
+          background-repeat: no-repeat;
+          height: 100vh;
+        }
+        h1 {
+          color: #101010;
+          margin-top: 1rem;
+          font-size: 7em;
+          user-select: none;
+          margin-bottom: 0;
+        }
+        #three-canvas {
+          position: fixed;
+          top: 0;
+          left: 0;
+        }
+        
+      </style>
+</head>
+<body>
+    <canvas id="three-canvas"></canvas>
+    <div id="container" class="rendered">
+      <h1>Fuck you !</h1> 
+      <img src="./assets/gorilla.jpg" alt="Gorilla"> 
+    </div>  
+    <script type="module" src="/main.js"></script>
+</body>
+</html>
